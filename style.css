@@ -1,0 +1,288 @@
+/* ==================== RESET ==================== */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 0;
+}
+
+/* ==================== VARS ==================== */
+
+:root {
+    --primary-base: #70A0FF;
+    --primary-light: #80ABFF;
+    --primary-dark: #5c92ff;
+
+    --white: white;
+    --black: black;
+
+    --background-image: url('./assets/fill.jpg');
+}
+
+
+/* ======================================== */
+/*                  LAYOUT                  */
+
+/*         prefix: o + name structure       */
+/* ======================================== */
+
+/* =============== CONTAINER ================ */
+
+
+.o-container {
+    width: 100%;
+    max-width: 600px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* =============== GRID ================ */
+
+/* Grid containers ( BOARD ) */
+.grid {
+    width: 100%;
+    display: grid;
+}
+
+.o-grid-7 {
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: .5rem;
+}
+
+.o-grid-8 {
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: .5rem;
+}
+
+.o-grid-9 {
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: .5rem;
+}
+
+/* Grid items */
+.o-grid-item {
+    justify-self: stretch;
+    align-self: stretch;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ======================================== */
+/*                  ATOMS                   */
+
+/*            prefix: a + atom              */
+/* ======================================== */
+
+/* =============== BUTTON ================ */
+
+/* (a: prefix of atom) + btn (element) */
+
+/* base class (structure) */
+.a-btn {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: .5em .75em;
+    border-radius: 2px;
+}
+
+/* style primary and actions (interaction) */
+.a-btn--primary {
+    background-color: var(--primary-base);
+    color: var(--white);
+
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.a-btn--primary:hover {
+    background-color: var(--primary-light);
+
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.a-btn--primary:active {
+    background-color: var(--primary-dark);
+
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+
+/* ======================================== */
+/*                UTILITIES                 */
+
+/*            prefix: u + name              */
+/* ======================================== */
+
+/* =============== FONT SIZE ================ */
+
+/* (u: prefix of utility class) + name  */
+
+.u-text-lg {
+    font-size: 2.25rem;
+}
+
+.u-text-md {
+    font-size: 1.5rem;
+}
+
+.u-text-base {
+    font-size: 1rem;
+}
+
+
+/* =============== FONT COLOR ================ */
+
+
+.u-text-white {
+    color: var(--white);
+}
+
+.u-text-black {
+    color: var(--black);
+}
+
+.u-text-primary-dark {
+    color: var(--primary-dark);
+}
+
+
+
+/* =============== BACKGROUND COLOR ================ */
+
+
+.u-bg-white {
+    background-color: var(--white);
+}
+
+.u-bg-black {
+    background-color: var(--black);
+}
+
+.u-bg-primary-base {
+    background-color: var(--primary-base);
+}
+
+.u-bg-primary-light {
+    background-color: var(--primary-light);
+}
+
+.u-bg-primary-dark {
+    background-color: var(--primary-dark);
+}
+
+.u-background-image {
+    background-image: var(--background-image);
+    background-position: center;
+}
+
+
+/* =============== SPACING ================ */
+
+
+.u-p-2 {
+    padding: .5em;
+}
+
+.u-px-2 {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.u-py-2 {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.u-p-4 {
+    padding: 1em;
+}
+
+.u-px-4 {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.u-py-4 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.u-mx-auto {
+    margin: 0 auto;
+}
+
+/* =============== BORDER RADIUS ================ */
+
+.u-rounded {
+    border-radius: 2px;
+}
+
+/* =============== FLEXBOX ================ */
+
+
+.u-flex {
+    display: flex;
+}
+
+.u-flex-col {
+    flex-direction: column;
+}
+
+.u-gap-2 {
+    gap: .5rem;
+}
+
+.u-gap-4 {
+    gap: 1rem;
+}
+
+.u-justify-between {
+    justify-content: space-between;
+}
+
+.u-justify-center {
+    justify-content: center;
+}
+
+.u-items-center {
+    align-items: center;
+}
+
+/* =============== Width ================ */
+
+.u-w-max-content {
+    width: max-content;
+}
+
+/* =============== Text align ================ */
+
+.u-text-center {
+    text-align: center;
+}
+
+.u-text-border-white {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+
+  font-weight: bolder;
+}
