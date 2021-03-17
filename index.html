@@ -7,7 +7,49 @@
     <title>Match ADAS</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body class="u-background-image">
+
+    <div class="o-container">
+        <!-- TITLE -->
+        <header>
+            <h1 class="u-text-center u-text-primary-dark u-text-lg u-text-border-white">MatchADAS</h1>
+        </header>
+        
+        <!-- CONTENT -->
+        <main>
+            <section class="u-flex u-flex-col u-gap-4">
+                <!-- Puntaje y Opciones -->
+                <header class="u-flex u-justify-between u-items-center u-py-2 u-px-4 u-rounded u-bg-primary-base">
+                    <div class="u-flex u-items-center u-gap-4 u-text-white">
+                        <p>Combosx <span>0</span></p>
+                        <p>Puntos: <span>0</span></p>
+                    </div>
+                    <div>
+                        <button id="button_info" class="a-btn a-btn--primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                              </svg>
+                        </button>
+                        <button id="button_repeat" class="a-btn a-btn--primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                                <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+                              </svg>
+                        </button>
+                    </div>
+                </header>
+
+                <!-- Tablero -->
+                <div id="board" class="u-p-4 u-bg-primary-light"></div>
+
+                <!-- Temporizador -->
+                <footer class="py-4 u-mx-auto">
+                    <p id="timer" class="u-px-4 u-py-2 u-text-md u-text-white u-bg-primary-base u-w-max-content u-rounded">00:00</p>
+                </footer>
+            </section>
+        </main>
+    </div>
     
     <script src="./main.js"></script>
 </body>
