@@ -274,7 +274,7 @@ p {
     width: max-content;
 }
 
-/* =============== Text align ================ */
+/* =============== Text ================ */
 
 .u-text-center {
     text-align: center;
@@ -286,3 +286,46 @@ p {
 
   font-weight: bolder;
 }
+
+/* Others */
+
+/* Item selected */
+.select {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/* screen portrait */
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+}
+
+.fade-transition-landscape {
+    opacity: 1;
+    transition: all 5s cubic-bezier(0.39, 0.575, 0.565, 1);
+} 
+
+.fade-transition-portrait {
+    opacity: 1;
+    transition: all 2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@media screen and (orientation: landscape) {
+    .fade-transition-landscape {
+        transition: all 5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .fade-transition-portrait {
+        transition: all 2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+} 
